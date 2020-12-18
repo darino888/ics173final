@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 #
-#
+# plot_comorbidity.py - plot comorbidity counts for all the races
 #
 
 #
@@ -19,17 +19,6 @@ dataframe = pd.read_csv("Comorbidity_SUMMARY.csv", index_col=0)
 #DEBUG#  print(dataframe.head(10))
 
 #
-# sets the style of the bar chart
-#
-
-
-#
-# title
-#
-#LATER# plt.title('COVID-19 Comorbidity by Race', fontsize=20)
-
-
-#
 # plot a horizontal bar chart
 #
 fig, ax = plt.subplots()
@@ -37,7 +26,7 @@ fig, ax = plt.subplots()
 ax.barh(dataframe.index, dataframe['medcond_ct'])
 
 ax.set_title('COVID-19 Comorbidity by Race', fontsize=20, horizontalalignment='right')
-ax.set_xlabel('Number of cases with comorbidity')
+ax.set_xlabel('Number of cases with comorbidity by race')
 
 plt.margins(0.2)
 plt.subplots_adjust(bottom=0.15)
