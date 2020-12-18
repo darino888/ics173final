@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 #
 my $PN = "$0";  $PN =~ s/.*\///;
-my $VN = "0.1";
+my $VN = "0.3";
 
 use strict;
 use Text::CSV;
